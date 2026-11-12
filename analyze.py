@@ -201,7 +201,7 @@ def analyze_overlap():
                             if len(words) > 1
                         ]
 
-                    row.append(",".join(f"{yale_to_hangul(mk_final)}({len(words)})" for mk_final, words in data))
+                    row.append(",".join(f"{yale_to_hangul(mk_final)}({len(words) if len(words) > 1 else words[0]})" for mk_final, words in data))
 
                 else:
                     # nothing here
